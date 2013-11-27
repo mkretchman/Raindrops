@@ -1,17 +1,17 @@
 class snowflake {
   PVector loc, vel, acc;
-  PImage flake;
+  PImage rain;
 
   snowflake() {
     loc = new PVector(random(width), random(-1000, 0));
     vel = new PVector(0, 2);
     acc = new PVector(0, 0.01);
-    flake = loadImage("picture.png");
+    rain = loadImage("picture.png");
   }
 
   void show() {
     imageMode(CENTER);        
-    image(flake, loc.x, loc.y,12,25);
+    image(rain, loc.x, loc.y,12,25);
   }
 
   void fall() {

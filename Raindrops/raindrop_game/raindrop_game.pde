@@ -20,6 +20,7 @@ void draw() {
     snowflake b = snowflakes.get(i);
     b.show();
     b.fall();
+    
     if (b.loc.y > mouseY-rh/2 && b.loc.y < mouseY+rh/2 && b.loc.x >mouseX-rw/2 && b.loc.x < mouseX+rw/2 && b.loc.x >mouseX-rw) {
       snowflakes.remove(i);
     }
