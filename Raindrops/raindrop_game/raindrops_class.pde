@@ -6,12 +6,12 @@ class snowflake {
     loc = new PVector(random(width), random(-1000, 0));
     vel = new PVector(0, 2);
     acc = new PVector(0, 0.01);
-    flake = loadImage("snow.png");
+    flake = loadImage("picture.png");
   }
 
   void show() {
     imageMode(CENTER);        
-    image(flake, loc.x, loc.y);
+    image(flake, loc.x, loc.y,12,25);
   }
 
   void fall() {
