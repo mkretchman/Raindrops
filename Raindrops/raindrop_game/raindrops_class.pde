@@ -1,8 +1,8 @@
-class snowflake {
+class raindrop {
   PVector loc, vel, acc;
   PImage rain;
 
-  snowflake() {
+  raindrop() {
     loc = new PVector(random(width), random(-1000, 0));
     vel = new PVector(0, 2);
     acc = new PVector(0, 0.01);
