@@ -18,8 +18,6 @@ void draw() {
   cur=millis();
   background(0);
   R1.appear();
-//  rectMode(CENTER);
-//  rect(mouseX, mouseY, rw, rh);
   if (cur-old >= 10) {
     old=cur;
     raindrops.add( new raindrop());
