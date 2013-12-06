@@ -3,7 +3,7 @@ Rectangle R1;
 int rh=50;
 int rw=50;
 int old;
-int cur;
+int current;
 void setup() {
   R1 = new Rectangle();
   size(500, 500);
@@ -15,11 +15,11 @@ void setup() {
 }
 
 void draw() {
-  cur=millis();
+  current=millis();
   background(0);
   R1.appear();
-  if (cur-old >= 10) {
-    old=cur;
+  if (current-old >= 10) {
+    old=current;
     raindrops.add( new raindrop());
 
     for (int i = raindrops.size()-1; i >= 0; i--) {
@@ -27,7 +27,7 @@ void draw() {
       b.show();
       b.fall();
 
-      if (b.loc.y > mouseY-rh/2 && b.loc.y < mouseY+rh/2 && b.loc.x >mouseX-rw/2 && b.loc.x < mouseX+rw/2 && b.loc.x >mouseX-rw) {
+      if (b.loc.y+11 > mouseY-rh/2 && b.loc.y-11 < mouseY+rh/2 && b.loc.x+6 >mouseX-rw/2 && b.loc.x-6 < mouseX+rw/2) {
         raindrops.remove(i);
       }
     }
