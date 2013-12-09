@@ -38,8 +38,9 @@ void draw() {
   if(start > 0){
   if (run) {
     textAlign(CORNER);
-    colorMode(RGB,255,255,255);
-    background(0);
+   colorMode(RGB,255,255,255);
+    background(125,200,255);
+     
     fill(255);
     textSize(20);
     current=millis();
