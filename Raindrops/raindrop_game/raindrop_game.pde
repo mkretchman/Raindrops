@@ -75,9 +75,14 @@ void draw() {
 
 void mousePressed() {
   run=!run;
-  textSize(30);
-  text("SCORE:", 165, 250);
-  text(c-m, 290, 250);
+  textSize(45);
+rectMode(CENTER);
+fill(0);
+rect(250,235,width,100);
+fill(255);
+  text("SCORE:", 145, 250);
+  text(c-m, 300, 250);
+ 
 }
 void keyPressed(){
   start+=1;
