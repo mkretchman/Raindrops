@@ -30,7 +30,9 @@ void draw() {
   textSize(20);
   text("Press Any Key to START",250,200);
   textSize(20);
-  text("CLICK TO PAUSE",250,300);
+  text("Click to Pause",250,300);
+  textSize(20);
+  text("Click for Score",250,400);
   }
     
   if(start > 0){
