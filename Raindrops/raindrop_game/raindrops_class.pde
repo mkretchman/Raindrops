@@ -1,4 +1,5 @@
 class raindrop {
+
   PVector loc, vel, acc;
   PImage rain;
 
@@ -11,7 +12,7 @@ class raindrop {
 
   void show() {
     imageMode(CENTER);        
-    image(rain, loc.x, loc.y,12,25);
+    image(rain, loc.x, loc.y, 12, 25);
   }
 
   void fall() {
@@ -21,3 +22,4 @@ class raindrop {
     }
   }
 }
+
