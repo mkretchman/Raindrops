@@ -81,6 +81,7 @@ void mousePressed() {
   text("SCORE:", 145, 250);
   text(c-m, 300, 250);
 }
+
 void keyPressed() {
   start+=1;
 }
