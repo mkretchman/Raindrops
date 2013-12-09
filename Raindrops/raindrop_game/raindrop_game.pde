@@ -3,11 +3,16 @@ Rectangle R1;
 int rh=50;
 int rw=50;
 int old;
+int c=0;
+int m=0;
 int current;
+boolean run;
 void setup() {
+  run = true;
   R1 = new Rectangle();
   size(500, 500);
   noStroke();
+  textSize(20);
   for (int i = 0; i<5; i++) {
     raindrops.add(new raindrop());
   }
@@ -15,8 +20,13 @@ void setup() {
 }
 
 void draw() {
+if(run){
   current=millis();
   background(0);
+  text("CAUGHT:", 335, 475);
+  text("MISSED:",15,475);
+  text(c, 435,475);
+  text(m,100,475);
   R1.appear();
   if (current-old >= 10) {
     old=current;
@@ -29,8 +39,20 @@ void draw() {
 
       if (b.loc.y+11 > mouseY-rh/2 && b.loc.y-11 < mouseY+rh/2 && b.loc.x+6 >mouseX-rw/2 && b.loc.x-6 < mouseX+rw/2) {
         raindrops.remove(i);
+        c+=1;
+      }
+      if(b.loc.y>height){
+        m+=1;
+        raindrops.remove(i);
       }
     }
   }
+}
+}
+
+void mousePressed(){
+  run=!run;
+  text("SCORE:",200,250);
+  text(c-m, 280,250);
 }
 
