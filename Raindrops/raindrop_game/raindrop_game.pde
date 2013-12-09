@@ -12,7 +12,7 @@ void setup() {
   R1 = new Rectangle();
   size(500, 500);
   noStroke();
-  textSize(20);
+  
   for (int i = 0; i<5; i++) {
     raindrops.add(new raindrop());
   }
@@ -21,6 +21,7 @@ void setup() {
 
 void draw() {
 if(run){
+  textSize(20);
   current=millis();
   background(0);
   text("CAUGHT:", 335, 475);
@@ -52,7 +53,8 @@ if(run){
 
 void mousePressed(){
   run=!run;
-  text("SCORE:",200,250);
-  text(c-m, 280,250);
+  textSize(30);
+  text("SCORE:",165,250);
+  text(c-m, 290,250);
 }
 
