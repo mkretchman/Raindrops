@@ -5,6 +5,7 @@ int rw=50;
 int old;
 int c=0;
 int m=0;
+int start=0;
 int current;
 boolean run;
 void setup() {
@@ -20,7 +21,21 @@ void setup() {
 }
 
 void draw() {
+  if(start<=0){
+    textAlign(CENTER);
+  background(255);
+  fill(0);
+  textSize(40);
+  text("CATCH THE RAIN",250,100);
+  textSize(20);
+  text("Press Any Key to START",250,200);
+  textSize(20);
+  text("CLICK TO PAUSE",250,300);
+  }
+    
+  if(start > 0){
   if (run) {
+    textAlign(CORNER);
     colorMode(RGB,255,255,255);
     background(0);
     fill(255);
@@ -53,6 +68,7 @@ void draw() {
     }
   }
 }
+}
 
 void mousePressed() {
   run=!run;
@@ -60,4 +76,6 @@ void mousePressed() {
   text("SCORE:", 165, 250);
   text(c-m, 290, 250);
 }
-
+void keyPressed(){
+  start+=1;
+}
