@@ -7,9 +7,8 @@ int c=0;
 int m=0;
 int start=0;
 int current;
-boolean run;
+boolean run=true;
 void setup() {
-  run = true;
   R1 = new Rectangle();
   size(500, 500);
   noStroke();
