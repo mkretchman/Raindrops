@@ -1,5 +1,9 @@
+//comments will come immediately before the block of code that they describe
+//Introduces an array list of raindrops
 ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
+//Names a rectangle from the catcher class
 Rectangle R1;
+//Declare miscellaneous variables to define catcher dimensions, time variables, starting values, and booleans
 int rh=50;
 int rw=50;
 int old=0;
@@ -8,17 +12,37 @@ int m=0;
 int start=0;
 int current;
 boolean run=true;
-void setup() {
-  R1 = new Rectangle();
-  size(500, 500);
-  noStroke();
 
+void setup() {
+  //Establishes R1 as a new rectangle from the catcher class as defined by the Rectangle() function
+  R1 = new Rectangle();
+  //Display Dimensions
+  size(500, 500);
+  //No Stroke
+  noStroke();
+//Using a for loop this adds five new raindrops to the array list
   for (int i = 0; i<5; i++) {
     raindrops.add(new raindrop());
   }
 }
 
 void draw() {
+  //Since start is defined as 0, this if statement will run
+   if (start<=0) {
+    textAlign(CENTER);
+    background(255);
+    fill(0);
+    textSize(40);
+    text("CATCH THE RAIN", 250, 100);
+    textSize(20);
+    text("Press Any Key to START", 250, 200);
+    textSize(20);
+    text("Click to Pause", 250, 300);
+    textSize(20);
+    text("Click for Score", 250, 400);
+  }
+  
+  //Once a key is pressed, start will increase and no longer be zero, causing this loop to run
   if (start > 0) {
     if (run) {
       textAlign(CORNER);
@@ -67,19 +91,7 @@ void draw() {
       text(c-m,250,340);
     }
   }
-  if (start<=0) {
-    textAlign(CENTER);
-    background(255);
-    fill(0);
-    textSize(40);
-    text("CATCH THE RAIN", 250, 100);
-    textSize(20);
-    text("Press Any Key to START", 250, 200);
-    textSize(20);
-    text("Click to Pause", 250, 300);
-    textSize(20);
-    text("Click for Score", 250, 400);
-  }
+ 
 }
 
 void mousePressed() {
