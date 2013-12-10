@@ -5,22 +5,20 @@ ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 
 //Names a rectangle from the catcher class
 Rectangle R1;
-
+timers timer;
 //Declares miscellaneous variables to define catcher dimensions, time variables, starting values, and booleans.
 int rh=50;
 int rw=50;
-int old=0;
 int c=0;
 int m=0;
 int gamelength=300;
 int start=0;
-int current;
 boolean run=true;
 
 void setup() {
   //Establishes R1 as a new rectangle from the catcher class.
   R1 = new Rectangle();
-
+timer = new timers();
   //Display Dimensions
   size(500, 500);
   //No Stroke
@@ -78,14 +76,8 @@ void draw() {
       //Calls on the appear() function of the rectangle in the catcher class.
       R1.appear();
 
-      //Sets current to equal the elapsed time.
-      current=millis();
-
-      //Tests to see if current - old is greater or equal to 10.  If it is true, the code will run.
-      if (current-old >= 10) {
-
-        //Sets the old variable to the current variable to reset the timer.
-        old=current;
+      //Tests to see if the test is true as defined by the timer class.  If it is true, the code will run.
+      if (timer.count()) {
 
         //Adds a new raindrop to the array list.
         raindrops.add( new raindrop());
