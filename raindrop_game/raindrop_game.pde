@@ -53,23 +53,13 @@ void draw() {
 
   //Once a key is pressed, start will increase and no longer be zero, causing this loop to run.
   if (start > 0) {
-
     //Run is defined as true intially, so this will run at first.  Run can be made false by clicking the mouse.
     if (run) {
-      //Text aligns from the corner.
+       //Text aligns from the corner.
       textAlign(CORNER);
       //Creates a constantly refreshing blue background.
       background(125, 200, 255);
-      //Makes the following objects white.
-      fill(255);
-      //Sets text size to 20.
-      textSize(20);
-      //Displays certain text lines.
-      text("CAUGHT:", 335, 475);
-      text("MISSED:", 15, 475);
-      text(c, 435, 475);
-      text(m, 100, 475);
-
+     
       //Calls on the appear() function of the rectangle in the catcher class.
       R1.appear();
 
@@ -101,6 +91,15 @@ void draw() {
             m+=1;
           }
         }
+         //Makes the following objects white.
+      fill(255);
+      //Sets text size to 20.
+      textSize(20);
+      //Displays certain text lines.
+      text("CAUGHT:", 335, 475);
+      text("MISSED:", 15, 475);
+      text(c, 435, 475);
+      text(m, 100, 475);
       }
 
       //Sets color mode to RGB with values of 255, 255, and 255 for red, green, and blue respectively.
