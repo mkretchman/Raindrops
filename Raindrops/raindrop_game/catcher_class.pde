@@ -1,4 +1,4 @@
-//Creates rectangle catcher class
+//Creates rectangle catcher class.
 class Rectangle {
 
   //Introduces a PVector called loc.

@@ -1,4 +1,4 @@
-//Creates class for raindrops
+//Creates class for raindrops.
 class raindrop {
   //Introduces PVectors.
   PVector loc, vel, acc;
@@ -6,7 +6,7 @@ class raindrop {
   PImage rain;
 
   raindrop() {
-    //Difines following PVectors.
+    //Defines following PVectors.
     loc = new PVector(random(width), random(-1000, 0));
     vel = new PVector(0, 2);
     acc = new PVector(0, 0.0255);
