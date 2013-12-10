@@ -11,6 +11,8 @@ As you miss the rain, your missed count increases.
 
 Your score is the amount of raindrops you catch minus the ones you miss.
 
+The game lasts untill a certain amount of raindrops are missed.
+
 Press Any Key To Begin
 
 Click To Pause
