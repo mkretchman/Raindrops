@@ -19,20 +19,6 @@ void setup() {
 }
 
 void draw() {
-  if (start<=0) {
-    textAlign(CENTER);
-    background(255);
-    fill(0);
-    textSize(40);
-    text("CATCH THE RAIN", 250, 100);
-    textSize(20);
-    text("Press Any Key to START", 250, 200);
-    textSize(20);
-    text("Click to Pause", 250, 300);
-    textSize(20);
-    text("Click for Score", 250, 400);
-  }
-
   if (start > 0) {
     if (run) {
       textAlign(CORNER);
@@ -67,7 +53,32 @@ void draw() {
           }
         }
       }
+      colorMode(RGB, 255, 255, 255);
+      fill(255);
+      text("CAUGHT:", 335, 475);
+      text("MISSED:", 15, 475);
     }
+    if (m>100) {
+      run= false;
+      textAlign(CENTER);
+      textSize(50);
+      text("GAME OVER", 250, 250);
+      text("SCORE:",250,300);
+      text(c-m,250,340);
+    }
+  }
+  if (start<=0) {
+    textAlign(CENTER);
+    background(255);
+    fill(0);
+    textSize(40);
+    text("CATCH THE RAIN", 250, 100);
+    textSize(20);
+    text("Press Any Key to START", 250, 200);
+    textSize(20);
+    text("Click to Pause", 250, 300);
+    textSize(20);
+    text("Click for Score", 250, 400);
   }
 }
 
