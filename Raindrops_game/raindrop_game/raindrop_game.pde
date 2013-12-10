@@ -17,7 +17,7 @@ boolean run=true;
 void setup() {
   //Establishes R1 as a new rectangle from the catcher class.
   R1 = new Rectangle();
-timer = new timers();
+  timer = new timers();
   //Display Dimensions
   size(500, 500);
   //No Stroke
@@ -46,10 +46,8 @@ void draw() {
     textSize(20);
     text("Press Any Key to START", 250, 200);
     //Sets text size to a certain value and then displays certain text.
-    textSize(20);
     text("Click to Pause", 250, 300);
     //Sets text size to a certain value and then displays certain text.
-    textSize(20);
     text("Click for Score", 250, 400);
   }
 
