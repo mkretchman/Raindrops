@@ -116,6 +116,7 @@ void draw() {
     if (m>gamelength) {
       //Sets run to false to stop game.
       run= false;
+      //Clears all raindrops in array list.
       raindrops.clear();
       background(125, 200, 255);
 
