@@ -5,6 +5,7 @@ ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 //Names a rectangle from the catcher class
 Rectangle R1;
 timers timer;
+Background back;
 //Declares miscellaneous variables to define catcher dimensions, time variables, starting values, and booleans.
 int rh=50;
 int rw=50;
@@ -15,6 +16,7 @@ int start=0;
 boolean run=true;
 
 void setup() {
+  back = new Background();
   //Establishes R1 as a new rectangle from the catcher class.
   R1 = new Rectangle();
   timer = new timers();
@@ -36,7 +38,7 @@ void draw() {
     //Sets text align to center.
     textAlign(CENTER);
     //Creates white background.
-    background(255);
+    back.bshow();
     //Sets fill to black for following text.
     fill(0);
     //Sets text size to a certain value and then displays certain text.
