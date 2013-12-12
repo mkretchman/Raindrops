@@ -11,9 +11,10 @@ int rh=50;
 int rw=50;
 int c=0;
 int m=0;
-int gamelength=300;
+int gamelength=30;
 int start=0;
 boolean run=true;
+boolean restart=true;
 
 void setup() {
   back = new Background();
@@ -121,7 +122,10 @@ void draw() {
       //Clears all raindrops in array list.
       raindrops.clear();
       background(125, 200, 255);
-
+if(mousePressed){
+  m=0;
+  run=true;
+}
       //Aligns text to center.
       textAlign(CENTER);
       //Sets text size to 50.
@@ -130,6 +134,8 @@ void draw() {
       text("GAME OVER", 250, 250);
       text("SCORE:", 250, 300);
       text(c-m, 250, 340);
+      textSize(20);
+      text("CLICK TO RESTART",250,450);
     }
   }
 }
