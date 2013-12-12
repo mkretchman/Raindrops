@@ -4,6 +4,7 @@ ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 
 //Names a rectangle from the catcher class
 Rectangle R1;
+GameOver G1;
 timers timer;
 Background back;
 //Declares miscellaneous variables to define catcher dimensions, time variables, starting values, and booleans.
@@ -11,7 +12,7 @@ int rh=50;
 int rw=50;
 int c=0;
 int m=0;
-int gamelength=30;
+int gamelength=3;
 int start=0;
 boolean run=true;
 boolean restart=true;
@@ -20,6 +21,7 @@ void setup() {
   back = new Background();
   //Establishes R1 as a new rectangle from the catcher class.
   R1 = new Rectangle();
+  G1 = new GameOver();
   timer = new timers();
   //Display Dimensions
   size(500, 500);
@@ -44,14 +46,14 @@ void draw() {
     fill(0);
     //Sets text size to a certain value and then displays certain text.
     textSize(40);
-    text("CATCH THE RAIN", 250, 100);
+    text("CATCH THE RAIN!!!", 250, 100);
     //Sets text size to a certain value and then displays certain text.
     textSize(20);
-    text("Press Any Key to START", 250, 200);
+    text("Press 'S' to START", 250, 200);
     //Sets text size to a certain value and then displays certain text.
-    text("Click to Pause", 250, 300);
+    text("Press 'P' to Pause", 250, 300);
     //Sets text size to a certain value and then displays certain text.
-    text("Click for Score", 250, 400);
+    text("Pause for Score", 250, 400);
   }
 
   //Once a key is pressed, start will increase and no longer be zero, causing this loop to run.
@@ -117,33 +119,22 @@ void draw() {
 
     //If more than a certain number of raindrops are missed, this will prove true.
     if (m>gamelength) {
-      //Sets run to false to stop game.
-      run= false;
-      //Clears all raindrops in array list.
-      raindrops.clear();
-      background(125, 200, 255);
-if(mousePressed){
-  m=0;
-  c=0;
-  run=true;
-}
-      //Aligns text to center.
-      textAlign(CENTER);
-      //Sets text size to 50.
-      textSize(50);
-      //Displays certain text lines.
-      text("GAME OVER", 250, 250);
-      text("SCORE:", 250, 300);
-      text(c-m, 250, 340);
-      textSize(20);
-      text("CLICK TO RESTART",250,450);
+      G1.ender();
     }
   }
 }
 
-//If mouse if pressed this will run once.
-void mousePressed() {
-  //Sets run to !run to display the score temporarily.
+
+
+
+//If a key is pressed this will run once to begin the game.
+void keyPressed() {
+  if(key == 's'){
+  //Adds one to the start variable.
+  start+=1;
+  }
+  if(key == 'p'){
+      //Sets run to !run to display the score temporarily.
   run=!run;
 
   //Sets text size to 45.
@@ -159,11 +150,6 @@ void mousePressed() {
   //Displays certain text.
   text("SCORE:", 145, 250);
   text(c-m, 300, 250);
-}
-
-//If a key is pressed this will run once to begin the game.
-void keyPressed() {
-  //Adds one to the start variable.
-  start+=1;
+  }
 }
 
