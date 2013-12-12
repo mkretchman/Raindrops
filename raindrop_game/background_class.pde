@@ -1,19 +1,22 @@
 class Background{
    int x;
-    int y;
+    int xspeed;
+    
+  
     
   Background() {
     x=0;
-    y=0;   
+    xspeed=10;   
   }
   
   void bshow(){
-    background(200,200,x);
-    if(x<255){
-     x+=20; 
+    x+=xspeed;
+    background(x,200,x);
+    if(x<0){
+     xspeed=-xspeed; 
     }
     if(x>255){
-     x-=20; 
+     xspeed=-xspeed; 
     }
   }
   
