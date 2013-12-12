@@ -10,7 +10,7 @@ class GameOver {
     //Clears all raindrops in array list.
     raindrops.clear();
     background(125, 200, 255);
-    if (mousePressed) {
+    if (keyPressed && key == 'r') {
       m=0;
       c=0;
       run=true;
@@ -24,7 +24,7 @@ class GameOver {
     text("SCORE:", 250, 300);
     text(c-m, 250, 340);
     textSize(20);
-    text("CLICK TO RESTART", 250, 450);
+    text("'R' TO RESTART", 250, 450);
   }
 }
 
