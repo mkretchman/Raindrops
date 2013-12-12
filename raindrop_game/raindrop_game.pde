@@ -124,6 +124,7 @@ void draw() {
       background(125, 200, 255);
 if(mousePressed){
   m=0;
+  c=0;
   run=true;
 }
       //Aligns text to center.
