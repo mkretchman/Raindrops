@@ -2,7 +2,7 @@
 //Introduces an array list of raindrops.
 ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 
-//Names a rectangle from the catcher class
+//Names miscellaneous classes.
 Rectangle R1;
 GameOver G1;
 timers timer;
@@ -19,7 +19,7 @@ boolean restart=true;
 
 void setup() {
   back = new Background();
-  //Establishes R1 as a new rectangle from the catcher class.
+  //Establishes the various names for the clases as new members of the class.
   R1 = new Rectangle();
   G1 = new GameOver();
   timer = new timers();
@@ -119,6 +119,7 @@ void draw() {
 
     //If more than a certain number of raindrops are missed, this will prove true.
     if (m>gamelength) {
+      //Runs GameOver class.
       G1.ender();
     }
   }
