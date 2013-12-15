@@ -3,18 +3,17 @@ Raindrops
 
 **Raindrops Game**
 
-In this game there will be multiple raindrops that fall from the sky.  Your goal is to catch them with the catcher object that is controlled by your mouse.  
+In this game there will be multiple raindrops that fall from the sky.  Your goal is to catch them with the catcher object that is controlled by your mouse.  Act quickly, because you are only allowed to miss three drops before you lose!  
 
-As you catch the rain, your cathed count increases. 
+As you catch the rain, your catch count increases. 
 
-As you miss the rain, your missed count increases.
+As you miss the rain, your miss count increases.
 
 Your score is the amount of raindrops you catch minus the ones you miss.
 
-The game lasts untill a certain amount of raindrops are missed.
 
-Press Any Key To Begin
+Press 'S' To Start
 
-Click To Pause
+Press 'P' To Pause
 
-Click To Show Score
+Pause for Score
