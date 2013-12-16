@@ -2,7 +2,7 @@
 //Introduces an array list of raindrops.
 ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 
-//Names miscellaneous classes.
+//Names what is assigned miscellaneous classes.
 Rectangle R1;
 GameOver G1;
 timers timer;
