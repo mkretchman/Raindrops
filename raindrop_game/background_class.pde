@@ -1,25 +1,27 @@
-class Background{
-   int x;
-    int xspeed;
-    
-  
-    
+//Creates Background class.
+class Background {
+  //Intorduces variables.
+  int x;
+  int xspeed;
+
+
   Background() {
     x=0;
-    xspeed=10;   
+    xspeed=10;
   }
-  
-  void bshow(){
+//Creates bshow() function for the rectangle in the class.
+  void bshow() {
+    //Increases x by adding xspeed to x.
     x+=xspeed;
-    background(x,200,x);
-    if(x<0){
-     xspeed=-xspeed; 
+    //Sets background according to x.
+    background(x, 200, x);
+    //Following if statements reverse the oscillation of the background color by altering xspeed.
+    if (x<0) {
+      xspeed=-xspeed;
     }
-    if(x>255){
-     xspeed=-xspeed; 
+    if (x>255) {
+      xspeed=-xspeed;
     }
   }
-  
 }
-
 
