@@ -1,11 +1,14 @@
+//Creates GameOver class.
 class GameOver {
+  //Introduces boolean run.
   boolean run;
 
   GameOver() {
     run = true;
   } 
+  //Creates ender() function for the GameOver class.
   void ender() {
-   //Sets run to false to stop game.
+    //Sets run to false to stop game.
     run= false;
     //Clears all raindrops in array list.
     raindrops.clear();
