@@ -136,6 +136,7 @@ void keyPressed() {
   }
   //If game has not started, this will be true.
   if (start>0) {
+    if(m<gamelength){
     if (key == 'p') {
       //Sets run to !run to display the score temporarily.
       run=!run;
@@ -153,6 +154,7 @@ void keyPressed() {
       //Displays certain text.
       text("SCORE:", 145, 250);
       text(c-m, 300, 250);
+    }
     }
   }
 }
