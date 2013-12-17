@@ -130,29 +130,30 @@ void draw() {
 
 //If a key is pressed this will run once to begin the game.
 void keyPressed() {
-  if(key == 's'){
-  //Adds one to the start variable.
-  start+=1;
+  if (key == 's') {
+    //Adds one to the start variable.
+    start+=1;
   }
-  if(start>0){
-  if(key == 'p'){
+  //If game has not started, this will be true.
+  if (start>0) {
+    if (key == 'p') {
       //Sets run to !run to display the score temporarily.
-  run=!run;
+      run=!run;
 
-  //Sets text size to 45.
-  textSize(45);
-  //Sets rectangle mode to center.
-  rectMode(CENTER);
-  //Sets fill to black for the rectangle.
-  fill(0);
-  //Displays rectangle.
-  rect(250, 235, width, 100);
-  //Sets fill to white for following text.
-  fill(255);
-  //Displays certain text.
-  text("SCORE:", 145, 250);
-  text(c-m, 300, 250);
-  }
+      //Sets text size to 45.
+      textSize(45);
+      //Sets rectangle mode to center.
+      rectMode(CENTER);
+      //Sets fill to black for the rectangle.
+      fill(0);
+      //Displays rectangle.
+      rect(250, 235, width, 100);
+      //Sets fill to white for following text.
+      fill(255);
+      //Displays certain text.
+      text("SCORE:", 145, 250);
+      text(c-m, 300, 250);
+    }
   }
 }
 
