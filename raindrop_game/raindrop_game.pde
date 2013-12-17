@@ -130,12 +130,14 @@ void draw() {
 
 //If a key is pressed this will run once to begin the game.
 void keyPressed() {
+  //If the key is 's', this will run as true.
   if (key == 's') {
     //Adds one to the start variable.
     start+=1;
   }
   //If game has not started, this will be true.
   if (start>0) {
+    //If the game has not ended, this will run as true.
     if(m<gamelength){
     if (key == 'p') {
       //Sets run to !run to display the score temporarily.
