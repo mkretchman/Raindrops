@@ -12,8 +12,11 @@ class GameOver {
     run= false;
     //Clears all raindrops in array list.
     raindrops.clear();
+    //Sets certain background.
     background(125, 200, 255);
+    //If the 'r' key is pressed this will run as true.
     if (keyPressed && key == 'r') {
+      //Assigns values to the following.
       m=0;
       c=0;
       run=true;
