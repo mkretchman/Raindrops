@@ -134,6 +134,7 @@ void keyPressed() {
   //Adds one to the start variable.
   start+=1;
   }
+  if(start>0){
   if(key == 'p'){
       //Sets run to !run to display the score temporarily.
   run=!run;
@@ -151,6 +152,7 @@ void keyPressed() {
   //Displays certain text.
   text("SCORE:", 145, 250);
   text(c-m, 300, 250);
+  }
   }
 }
 
