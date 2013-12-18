@@ -138,25 +138,25 @@ void keyPressed() {
   //If game has not started, this will be true.
   if (start>0) {
     //If the game has not ended, this will run as true.
-    if(m<gamelength){
-    if (key == 'p') {
-      //Sets run to !run to display the score temporarily.
-      run=!run;
+    if (m<gamelength) {
+      if (key == 'p') {
+        //Sets run to !run to display the score temporarily.
+        run=!run;
 
-      //Sets text size to 45.
-      textSize(45);
-      //Sets rectangle mode to center.
-      rectMode(CENTER);
-      //Sets fill to black for the rectangle.
-      fill(0);
-      //Displays rectangle.
-      rect(250, 235, width, 100);
-      //Sets fill to white for following text.
-      fill(255);
-      //Displays certain text.
-      text("SCORE:", 145, 250);
-      text(c-m, 300, 250);
-    }
+        //Sets text size to 45.
+        textSize(45);
+        //Sets rectangle mode to center.
+        rectMode(CENTER);
+        //Sets fill to black for the rectangle.
+        fill(0);
+        //Displays rectangle.
+        rect(250, 235, width, 100);
+        //Sets fill to white for following text.
+        fill(255);
+        //Displays certain text.
+        text("SCORE:", 145, 250);
+        text(c-m, 300, 250);
+      }
     }
   }
 }
