@@ -13,7 +13,7 @@ class timers{
     //Assigns t to be false.
     boolean t = false;
     //If the current time minus the old time is more than 10 milliseconds, this will be true and it will run.
-    if (millis() - old >= 10)  //this is when it'll do something
+    if (millis() - old >= 10)
     {
       //reset the counter to 0
       old = millis();
