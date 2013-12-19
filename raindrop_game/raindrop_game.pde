@@ -8,8 +8,8 @@ GameOver G1;
 timers timer;
 Background back;
 //Declares miscellaneous variables to define catcher dimensions, time variables, starting values, and booleans.
-int rh=50;
-int rw=50;
+int rh=75;
+int rw=75;
 int c=0;
 int m=0;
 int gamelength=3;
@@ -79,13 +79,15 @@ void draw() {
           raindrop b = raindrops.get(i);
           b.show();
           b.fall();
-
-          //If the raindrop comes in contact with the catcher object, this test will prove to be true.
-          if (b.loc.y+11 > mouseY-rh/2 && b.loc.y-11 < mouseY+rh/2 && b.loc.x+6 >mouseX-rw/2 && b.loc.x-6 < mouseX+rw/2) {
-            //Removes that particular raindrop from array list.
-            raindrops.remove(i);
-            //Adds one to the caught variable.
-            c+=1;
+          //If the game is not over, catching will be allowed.
+          if (m<gamelength) {
+            //If the raindrop comes in contact with the catcher object, this test will prove to be true.
+            if (b.loc.y+11 > mouseY-rh/2 && b.loc.y-11 < mouseY+rh/2 && b.loc.x+6 >mouseX-rw/2 && b.loc.x-6 < mouseX+rw/2) {
+              //Removes that particular raindrop from array list.
+              raindrops.remove(i);
+              //Adds one to the caught variable.
+              c+=1;
+            }
           }
 
           //If the raindrop falls below the height, this test will prove true.

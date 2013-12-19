@@ -7,6 +7,7 @@ class Rectangle {
   PImage bucketdry;
   PImage bucketwet;
 
+
   Rectangle() {
     //Defines the PVector loc.
     loc = new PVector(mouseX, mouseY);
@@ -25,8 +26,15 @@ class Rectangle {
     fill(mouseX, 1, 1);
     //Sets rectangle mode to center.
     rectMode(CENTER); 
-    //Disolays picture at (loc.x,loc.y) with a height of rh and width of rw.
-    image(bucketdry,loc.x, loc.y, rw, rh);
+    //If less than 100 raindrops have been caught, this will be true.
+    if (c<100) {
+      //Displays dry bucket at (loc.x,loc.y) with a height of rh and width of rw.
+      image(bucketdry, loc.x, loc.y, rw, rh);
+    }
+    //If more than 100 raindrops are caught this will be true.
+    if (c>100) {
+      //Displays full bucket at (loc.x,loc.y) with a height of rh and width of rw.
+      image(bucketwet, loc.x, loc.y, rw, rh);
+    }
   }
 }
-
