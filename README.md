@@ -26,6 +26,7 @@ If you are skillful enough to catch more than 100 raindrops, you will upgrade yo
 Be sure not to pause the game more than two times or I will think you are trying to cheat and you will be banished!  You have been warned! 
 
 
+
 **Glitches**
 
 As I worked on the program, I glitch tested to try to find as many glitches as I could early on.  This prevented there from being a lot of glitches when the program was "finished."  Even so, I found three glitches in my game at the end that all arose from problems with the pause function.  I fixed all of these glitches.  I do not believe that there are any more glitches in the game now.
