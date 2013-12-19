@@ -5,6 +5,7 @@ ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 //Names what is assigned miscellaneous classes.
 Rectangle R1;
 GameOver G1;
+Banish B1;
 timers timer;
 Background back;
 //Declares miscellaneous variables to define catcher dimensions, time variables, starting values, and booleans.
@@ -14,6 +15,7 @@ int c=0;
 int m=0;
 int gamelength=3;
 int start=0;
+int pause=0;
 boolean run=true;
 boolean restart=true;
 
@@ -22,6 +24,7 @@ void setup() {
   //Establishes the various names for the clases as new members of the class.
   R1 = new Rectangle();
   G1 = new GameOver();
+  B1 = new Banish();
   timer = new timers();
   //Display Dimensions
   size(500, 500);
@@ -124,6 +127,11 @@ void draw() {
       //Runs GameOver class.
       G1.ender();
     }
+    //If the game is paused more than twice, this will be true.
+    if (pause>4) {
+      //Banishes player.
+      B1.banish();
+    }
   }
 }
 
@@ -141,10 +149,11 @@ void keyPressed() {
   if (start>0) {
     //If the game has not ended, this will run as true.
     if (m<gamelength) {
+      //If 'P' is pressed, this will be true.
       if (key == 'p') {
         //Sets run to !run to display the score temporarily.
         run=!run;
-
+        pause++;
         //Sets text size to 45.
         textSize(45);
         //Sets rectangle mode to center.

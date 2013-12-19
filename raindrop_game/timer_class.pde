@@ -1,5 +1,5 @@
 //Creates class for timer.
-class timers{
+class timers {
   //Intorduces variable.
   int old;
 
@@ -8,7 +8,7 @@ class timers{
     old = 0;
   }
 
-//Sets a boolean function as defined by the code inside.
+  //Sets a boolean function as defined by the code inside.
   boolean count() {
     //Assigns t to be false.
     boolean t = false;
@@ -22,7 +22,6 @@ class timers{
     }
     //Return the value of t.
     return t;
-
   }
 }
 
