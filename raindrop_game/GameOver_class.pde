@@ -19,6 +19,7 @@ class GameOver {
       //Assigns values to the following.
       m=0;
       c=0;
+      pause=0;
       run=true;
     }
     //Aligns text to center.
