@@ -17,7 +17,7 @@ Press 'S' To Start
 
 Press 'P' To Pause
 
-Pause for Score
+Pause to see Score
 
 Press 'R' To Reset (Once the game is lost)
 
