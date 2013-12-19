@@ -19,4 +19,6 @@ Press 'P' To Pause
 
 Pause for Score
 
+Press 'R' To Reset (Once the game is lost)
+
 Be sure not to pause the game more than two times or I will think you are cheating and you will be banished!  You have been warned! 
