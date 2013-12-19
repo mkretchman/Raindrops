@@ -3,10 +3,16 @@ class Rectangle {
 
   //Introduces a PVector called loc.
   PVector loc;
+  //Introduces PImages for buckets.
+  PImage bucketdry;
+  PImage bucketwet;
 
   Rectangle() {
     //Defines the PVector loc.
     loc = new PVector(mouseX, mouseY);
+    //Names images.
+    bucketdry = loadImage("pail2.png");
+    bucketwet = loadImage("pailw2.png");
   }
 
   //Creates appear() function for the rectangle in the class.
@@ -19,8 +25,8 @@ class Rectangle {
     fill(mouseX, 1, 1);
     //Sets rectangle mode to center.
     rectMode(CENTER); 
-    //Disolays rectangle at (loc.x,loc.y) with a height of rh and width of rw.
-    rect(loc.x, loc.y, rw, rh);
+    //Disolays picture at (loc.x,loc.y) with a height of rh and width of rw.
+    image(bucketdry,loc.x, loc.y, rw, rh);
   }
 }
 
