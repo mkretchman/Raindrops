@@ -33,6 +33,7 @@ class Rectangle {
     }
     //If more than 100 raindrops are caught this will be true.
     if (c>100) {
+      //Increases bucket size.
       rw=125;
       rh=125;
       //Displays full bucket at (loc.x,loc.y) with a height of rh and width of rw.
