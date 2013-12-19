@@ -151,9 +151,12 @@ void keyPressed() {
     if (m<gamelength) {
       //If 'P' is pressed, this will be true.
       if (key == 'p') {
+       
         //Sets run to !run to display the score temporarily.
         run=!run;
         pause++;
+        //If 'P' has been pressed less than four times, this will be true.
+        if(pause<4){
         //Sets text size to 45.
         textSize(45);
         //Sets rectangle mode to center.
@@ -168,6 +171,7 @@ void keyPressed() {
         text("SCORE:", 145, 250);
         text(c-m, 300, 250);
       }
+    }
     }
   }
 }
