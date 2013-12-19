@@ -1,4 +1,4 @@
-//Comments will come immediately before the block of code that they describe.
+//Comments will come immediately before the block or line of code that they describe.
 //Introduces an array list of raindrops.
 ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 
