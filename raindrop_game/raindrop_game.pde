@@ -82,7 +82,7 @@ void draw() {
           //If the game is not over, catching will be allowed.
           if (m<gamelength) {
             //If the raindrop comes in contact with the catcher object, this test will prove to be true.
-            if (b.loc.y+11 > mouseY-rh/2 && b.loc.y-11 < mouseY+rh/2 && b.loc.x+6 >mouseX-rw/2 && b.loc.x-6 < mouseX+rw/2) {
+            if (b.loc.y-10> mouseY-rh/2 && b.loc.y-11 < mouseY+rh/2 && b.loc.x+6 >mouseX-rw/2 && b.loc.x-6 < mouseX+rw/2) {
               //Removes that particular raindrop from array list.
               raindrops.remove(i);
               //Adds one to the caught variable.
