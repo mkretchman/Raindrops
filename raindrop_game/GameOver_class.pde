@@ -30,7 +30,9 @@ class GameOver {
     text("GAME OVER", 250, 250);
     text("SCORE:", 250, 300);
     text(c-m, 250, 340);
+    //Sets text size to 20.
     textSize(20);
+    //Displays text line.
     text("'R' TO RESTART", 250, 450);
   }
 }

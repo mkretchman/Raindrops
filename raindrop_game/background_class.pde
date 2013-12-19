@@ -9,7 +9,7 @@ class Background {
     x=0;
     xspeed=10;
   }
-  //Creates bshow() function for the rectangle in the class.
+  //Creates bshow() function for the Bucket in the class.
   void bshow() {
     //Increases x by adding xspeed to x.
     x+=xspeed;

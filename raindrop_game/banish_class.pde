@@ -12,7 +12,7 @@ class Banish {
     run= false;
     //Clears all raindrops in array list.
     raindrops.clear();
-    //Sets certain background.
+    //Sets red background.
     background(255, 0, 0);  
     //Aligns text to center.
     textAlign(CENTER);

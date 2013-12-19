@@ -1,5 +1,5 @@
-//Creates rectangle catcher class.
-class Rectangle {
+//Creates Bucket catcher class.
+class Bucket {
 
   //Introduces a PVector called loc.
   PVector loc;
@@ -8,7 +8,7 @@ class Rectangle {
   PImage bucketwet;
 
 
-  Rectangle() {
+  Bucket() {
     //Defines the PVector loc.
     loc = new PVector(mouseX, mouseY);
     //Names images.
@@ -16,14 +16,12 @@ class Rectangle {
     bucketwet = loadImage("pailw2.png");
   }
 
-  //Creates appear() function for the rectangle in the class.
+  //Creates appear() function for the Bucket in the class.
   void appear() {
     //Sets loc to mouseX and mouseY coordinates.
     loc.set(mouseX, mouseY);
     //Sets color mode to HSB with values of width, 1, and 1 for hue, saturation, and brightness.
     colorMode(HSB, width, 1, 1);
-    //Sets fill
-    fill(mouseX, 1, 1);
     //Sets rectangle mode to center.
     rectMode(CENTER); 
     //If less than 100 raindrops have been caught, this will be true.

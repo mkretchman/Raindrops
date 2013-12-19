@@ -3,7 +3,7 @@
 ArrayList<raindrop> raindrops = new ArrayList<raindrop>();
 
 //Names what is assigned miscellaneous classes.
-Rectangle R1;
+Bucket R1;
 GameOver G1;
 Banish B1;
 timers timer;
@@ -20,9 +20,9 @@ boolean run=true;
 boolean restart=true;
 
 void setup() {
-  back = new Background();
   //Establishes the various names for the clases as new members of the class.
-  R1 = new Rectangle();
+  back = new Background();
+  R1 = new Bucket();
   G1 = new GameOver();
   B1 = new Banish();
   timer = new timers();
@@ -43,19 +43,17 @@ void draw() {
   if (start<=0) {
     //Sets text align to center.
     textAlign(CENTER);
-    //Creates white background.
+    //Creates changing background.
     back.bshow();
     //Sets fill to black for following text.
     fill(0);
-    //Sets text size to a certain value and then displays certain text.
+    //Sets text size to 40 and then displays certain text.
     textSize(40);
     text("CATCH THE RAIN!!!", 250, 100);
-    //Sets text size to a certain value and then displays certain text.
+    //Sets text size to 20 and then displays certain text.
     textSize(20);
     text("Press 'S' to START", 250, 200);
-    //Sets text size to a certain value and then displays certain text.
     text("Press 'P' to Pause", 250, 300);
-    //Sets text size to a certain value and then displays certain text.
     text("Pause for Score", 250, 400);
   }
 
@@ -68,7 +66,7 @@ void draw() {
       //Creates a constantly refreshing blue background.
       background(125, 200, 255);
 
-      //Calls on the appear() function of the rectangle in the catcher class.
+      //Calls on the appear() function of the bucket in the catcher class.
       R1.appear();
 
       //Tests to see if the test is true as defined by the timer class.  If it is true, the code will run.
@@ -77,7 +75,7 @@ void draw() {
         //Adds a new raindrop to the array list.
         raindrops.add( new raindrop());
 
-        //Using a for loop the array list of raindrops is cycled through and each one is called to show() and to fall()
+        //Using a for loop the array list of raindrops is cycled through and each one is called to show() and to fall().
         for (int i = raindrops.size()-1; i >= 0; i--) {
           raindrop b = raindrops.get(i);
           b.show();
@@ -140,30 +138,30 @@ void draw() {
 
 //If a key is pressed this will run once to begin the game.
 void keyPressed() {
-  //If the key is 's', this will run as true.
+  //If the key is 'S', this will run as true.
   if (key == 's') {
     //Adds one to the start variable.
     start+=1;
   }
   //If game has not started, this will be true.
   if (start>0) {
-    //If the game has not ended, this will run as true.
+    //If the player has not missed more drops than allowed, this will run as true.
     if (m<gamelength) {
       //If 'P' is pressed, this will be true.
-      if (key == 'p') {
-       
+      if (key == 'p') {       
         //Sets run to !run to display the score temporarily.
         run=!run;
+        //Increases pause by one.
         pause++;
         //If 'P' has been pressed less than four times, this will be true.
         if(pause<4){
         //Sets text size to 45.
         textSize(45);
-        //Sets rectangle mode to center.
+        //Sets Bucket mode to center.
         rectMode(CENTER);
-        //Sets fill to black for the rectangle.
+        //Sets fill to black for the Bucket.
         fill(0);
-        //Displays rectangle.
+        //Displays Bucket.
         rect(250, 235, width, 100);
         //Sets fill to white for following text.
         fill(255);
