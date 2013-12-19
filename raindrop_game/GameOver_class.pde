@@ -4,7 +4,7 @@ class GameOver {
   boolean run;
 
   GameOver() {
-    run = true;
+    run=true;
   } 
   //Creates ender() function for the GameOver class.
   void ender() {
@@ -17,9 +17,10 @@ class GameOver {
     //If the 'r' key is pressed this will run as true.
     if (keyPressed && key == 'r') {
       //Assigns values to the following.
+      pause=0;
       m=0;
       c=0;
-      run=true;
+      run=!run;
     }
     //Aligns text to center.
     textAlign(CENTER);

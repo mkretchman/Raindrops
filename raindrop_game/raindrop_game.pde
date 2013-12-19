@@ -12,8 +12,9 @@ int rh=75;
 int rw=75;
 int c=0;
 int m=0;
-int gamelength=3;
+int gamelength=6;
 int start=0;
+int pause=0;
 boolean run=true;
 boolean restart=true;
 
@@ -120,10 +121,11 @@ void draw() {
     }
 
     //If more than a certain number of raindrops are missed, this will prove true.
-    if (m>gamelength) {
+    if (m>gamelength || pause > 5) {
       //Runs GameOver class.
       G1.ender();
     }
+    
   }
 }
 
@@ -135,16 +137,22 @@ void keyPressed() {
   //If the key is 's', this will run as true.
   if (key == 's') {
     //Adds one to the start variable.
-    start+=1;
+    start++;
   }
-  //If game has not started, this will be true.
-  if (start>0) {
-    //If the game has not ended, this will run as true.
-    if (m<gamelength) {
-      if (key == 'p') {
-        //Sets run to !run to display the score temporarily.
+///  //If game has not started, this will be true.
+//  if (start>0) {    
+//    //If the game has not ended, this will run as true.
+//    if (m<gamelength){
+//      //If 'P' is pressed.
+//      if (key == 'p') {
+//        //Sets run to !run to display the score temporarily.
+if(key == 'p'){
+  if(start>0){
+    if(m<gamelength){
         run=!run;
-
+        if(pause<=5){
+        pause++;
+  }
         //Sets text size to 45.
         textSize(45);
         //Sets rectangle mode to center.
